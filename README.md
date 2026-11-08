@@ -91,8 +91,8 @@ Claude Desktop に登録する(`/絶対パス/...` は自分の環境に合わ�
 
 ## 参考資料(確認日: 2026-11-08)
 
-> セッションのネットワーク制限により `modelcontextprotocol.io` には直接アクセスできなかったため、同サイトのソースである GitHub リポジトリ
-> (`modelcontextprotocol/modelcontextprotocol`)の該当ファイルで内容を確認しました。公開 URL と GitHub 上のファイルを併記します。
+> 仕様・ドキュメントは公開 URL と、同サイトのソースである GitHub リポジトリ(`modelcontextprotocol/modelcontextprotocol`)の
+> 該当ファイルを併記します。後者は版が明示されるため、記述がどの版に基づくかを追えます。
 
 ### MCP 仕様(S)
 
