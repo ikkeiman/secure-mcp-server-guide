@@ -23,10 +23,10 @@
 
 ```mermaid
 flowchart TB
-    subgraph host[Claude Desktop 側の防御]
+    subgraph host["Claude Desktop 側の防御"]
         U[承認 UI] --- L[stderr → ログ保存]
     end
-    subgraph srv[サーバー側(案 A)の防御]
+    subgraph srv["サーバー側（案 A）の防御"]
         P1[書き込みツールを置かない] --- P2[realpath で許可ルート検証]
         P2 --- P3[拡張子・サイズ・件数・文字数の上限]
         P3 --- P4[原文を残さない構造化ログ]
