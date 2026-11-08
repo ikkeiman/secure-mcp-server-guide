@@ -29,6 +29,11 @@ import time
 from pathlib import Path
 from typing import Any
 
+# mcp 2.x 系を前提とする(1.x では MCPServer は FastMCP という名前で、
+# ToolAnnotations のフィールド名も異なる)。pyproject.toml で mcp>=2,<3 に固定している。
+from mcp.server import MCPServer
+from mcp.types import ToolAnnotations
+
 from policy import (
     Policy,
     PolicyError,
@@ -39,13 +44,6 @@ from policy import (
     validate_query,
     validate_readable_file,
 )
-
-try:  # mcp 2.x
-    from mcp.server import MCPServer
-    from mcp.types import ToolAnnotations
-except ImportError:  # pragma: no cover - mcp 1.x との互換(FastMCP 名)
-    from mcp.server.fastmcp import FastMCP as MCPServer  # type: ignore[no-redef]
-    from mcp.types import ToolAnnotations
 
 # --- ログ: stderr へ JSON Lines。本文・検索語・絶対パスは出さない -------------------
 

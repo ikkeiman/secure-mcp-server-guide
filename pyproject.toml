@@ -22,6 +22,8 @@ package = false
 line-length = 110
 target-version = "py312"
 src = ["reference"]
+# Markdown 内のコード例は「悪い例」を含むため整形対象外にする
+extend-exclude = ["*.md"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP", "W"]
